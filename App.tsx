@@ -1,12 +1,16 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import {Profile} from './src/pages/profile';
+import { Home } from './src/pages/home'
+import { PaperProvider, useTheme } from 'react-native-paper';
 
 function App() {
+  const theme = useTheme();
   return (
-    <SafeAreaView>
-      <Profile />
-    </SafeAreaView>
+    <PaperProvider theme={theme}>
+      <SafeAreaView>
+        <Home />
+      </SafeAreaView>
+    </PaperProvider>
   );
 }
 
